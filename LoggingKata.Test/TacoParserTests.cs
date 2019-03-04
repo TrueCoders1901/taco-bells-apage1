@@ -8,7 +8,7 @@ namespace LoggingKata.Test
         [Fact]
         public void ShouldDoSomething()
         {
-            // TODO: Complete Something, if anything
+            //
         }
 
         [Theory]
@@ -30,7 +30,6 @@ namespace LoggingKata.Test
         {
             //Arrange
             TacoParser tacoParser = new TacoParser();
-
             //Act
             ITrackable result = tacoParser.Parse(str);
             //Assert

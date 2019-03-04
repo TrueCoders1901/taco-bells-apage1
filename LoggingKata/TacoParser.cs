@@ -11,16 +11,10 @@
         {
             logger.LogInfo("Begin parsing");
 
-            // Do not fail if one record parsing fails, return null
-            // TODO Implement
-
-            // Take your line and use line.Split(',') to split it up into an array of strings, separated by the char ','
             var cells = line.Split(',');
 
-            // If your array.Length is less than 3, something went wrong
             if (cells.Length < 3)
             {
-                // Log that and return null
                 return null;
             }
 
@@ -30,13 +24,13 @@
             string longitude = cells[1];
             // grab the name from your array at index 2
             string name = cells[2];
-            // Your going to need to parse your string as a `double`
+            // parse your string as a `double`
             double lat = double.Parse(latitude);
             double lon = double.Parse(longitude);
 
-            // Then, you'll need an instance of the TacoBell class
+            // New instance of the TacoBell class
             TacoBell tacoBell = new TacoBell();
-            // With the name and point set correctly
+
             tacoBell.Name = name;
 
             Point point = new Point();
@@ -44,9 +38,9 @@
             point.Longitude = lon;
 
             tacoBell.Location = point;
-            // Then, return the instance of your TacoBell class
+
             return tacoBell;
-            // Since it conforms to ITrackable
+
 
 
         }
