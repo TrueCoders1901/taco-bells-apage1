@@ -13,6 +13,11 @@ namespace LoggingKata.Test
 
         [Theory]
         [InlineData("0, 0, test")]
+        [InlineData("-0.5, 0.5, test")]
+        [InlineData("-10, 10, test")]
+        [InlineData("-15, 15, test")]
+        [InlineData("-20.5, 20.5, test")]
+
         public void ShouldParse(string str)
         {
             //Arrange
@@ -25,7 +30,11 @@ namespace LoggingKata.Test
 
         [Theory]
         [InlineData(null)]
-        [InlineData("")]
+        [InlineData("test, test, test")]
+        [InlineData("11, fail, true")]
+        [InlineData("test, 44, test")]
+        [InlineData("100Test, 20, Test")]
+        [InlineData("null, null, 1")]
         public void ShouldFailParse(string str)
         {
             //Arrange

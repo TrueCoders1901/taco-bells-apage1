@@ -52,8 +52,8 @@ namespace LoggingKata
                 }
 
             }
+            Console.WriteLine("Location 1: " + locX.Name + "\nLocation 2: " + locY.Name + "\nDistance: " + distance);
 
-            Console.WriteLine(locX.Name + locX.Location + locY.Name + locY.Location + distance);
             Console.ReadLine();
 
         }
